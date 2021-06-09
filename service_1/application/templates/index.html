@@ -1,0 +1,16 @@
+<h1>Football Players</h1>
+
+<h2>Refresh the page to generate a player and an opponent to see if they score or not</h2>
+
+<p>
+    {{ goal }}<br><br>
+    Player chosen: {{ player }} <br>
+    Team chosen: {{ team }}
+</p>
+
+<h2>Your last couple results</h2>
+{% for result in view_players %}
+Player chosen was {{ result.name }} --- Team chosen was {{ result.team }}<br>
+The result was {{ result.result }}<br><br>
+
+{% endfor %}

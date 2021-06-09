@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  outcome_frontend:
+    container_name: football_outcome_frontend
+    image: armankhanx14/service_1:${app_version}
+    build: ./service_1
+    ports: 
+    - target: 5000
+      published: 80
+      protocol: tcp
+
+  player_backend:
+    container_name: football_player_backend
+    image: armankhanx14/service_2:${app_version}
+    build: ./service_2
+
+  team_backend:
+    container_name: football_team_backend
+    image: armankhanx14/service_3:${app_version}
+    build: ./serice_3
+
+  result_backend:
+    container_name: football_result_backend
+    image: armankhanx14/service_4:${app_version}
+    build: ./service_4
