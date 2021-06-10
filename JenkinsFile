@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+    stages {
+        stage('Test') {
+            steps {
+                //
+            }
+        }
+        stage('Build') {
+            steps {
+                //
+            }
+        }
+        stage('Push') {
+            steps {
+                //
+            }
+        }
+        stage('Configuration Manegement (Ansible)') {
+            steps {
+                //
+            }
+        }
+        stage('Deploy') {
+            steps {
+                //
+            }
+        }
+    }
+}

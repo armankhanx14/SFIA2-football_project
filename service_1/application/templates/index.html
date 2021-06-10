@@ -1,8 +1,24 @@
-<h1>Football Players</h1>
+<body, html {
+    height: 100%;
+  }
+  
+  .bg {
+    /* The image used */
+    background-image: url("arsenal.jpg");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }>
+<h1 style="color:blue;">Football Players</h1>
 
 <h2>Refresh the page to generate a player and an opponent to see if they score or not</h2>
 
-<p>
+<p style="font-family:verdana;">
     {{ goal }}<br><br>
     Player chosen: {{ player }} <br>
     Team chosen: {{ team }}
@@ -14,3 +30,5 @@ Player chosen was {{ result.name }} --- Team chosen was {{ result.team }}<br>
 The result was {{ result.result }}<br><br>
 
 {% endfor %}
+
+</body>

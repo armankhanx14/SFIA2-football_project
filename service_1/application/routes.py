@@ -1,7 +1,7 @@
 from application import app, db
 from application.models import Players
 import requests
-from requests import get, requests
+from requests import get
 from flask import render_template
 from sqlalchemy import desc
 
