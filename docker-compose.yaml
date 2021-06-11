@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   outcome_frontend:
-    container_name: service_1_frontend
+    container_name: outcome_frontend
     image: armankhanx14/service_1
     build: ./service_1
     ports: 
@@ -10,20 +10,18 @@ services:
       protocol: tcp
     environment:
       DATABASE_URI: ${DATABASE_URI}
- 
-
 
   player_backend:
-    container_name: service_2_player_backend
+    container_name: football_player_backend
     image: armankhanx14/service_2
     build: ./service_2
 
   team_backend:
-    container_name: service_3_team_backend
+    container_name: football_team_backend
     image: armankhanx14/service_3
     build: ./service_3
 
   result_backend:
-    container_name: service_4_result_backend
+    container_name: football_result_backend
     image: armankhanx14/service_4
     build: ./service_4
