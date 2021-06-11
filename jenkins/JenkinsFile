@@ -39,7 +39,7 @@ pipeline {
                 // install ansible on jenkins machine for the jenkins user
                 // ansible-playbook -i inventory.yaml playbook.yaml
                 // sh "cd ansible && ansible-playbook -i inventory.yaml playbook.yaml"
-                sh 'echo config'
+                sh 'cd ansible && ansible-playbook -i inventory.yaml playbook.yaml'
             }
         }
         stage('Deploy') {
