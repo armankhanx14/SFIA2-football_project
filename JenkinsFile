@@ -24,7 +24,7 @@ pipeline {
             steps {
                 // install docker and docker compose
                 // docker-compose build
-                sh 'docker-compose build'
+                sh 'docker-compose build --parallel'
             }
         }
         stage('Push') {
