@@ -12,7 +12,7 @@ class TestResponse(TestBase):
     def test_result(self):
         players = ["Henry", "Ozil", "Bergkamp", "Fabregas"]
         teams = ["Chelsea", "Totenham", "ManchesterUnited", "Liverpool"]
-        result = [b"Fabregas will score 4 goals", b"Fabregas will score 4 goals", b"Fabregas will score 4 goals", b"Fabregas will score 4 goals",
+        result = [b"Fabregas will score 2 goals", b"Fabregas will score 2 goals", b"Fabregas will score 2 goals", b"Fabregas will score 4 goals",
                 b"Henry will not score", b"Henry will score a hat-trick", b"Henry will score a hat-trick", b"Henry will score a hat-trick", 
                 b"Ozil will not score", b"Ozil will score a freekick", b"Ozil will not score", b"Ozil will score a freekick", 
                 b"Bergkamp will not score", b"Bergkamp will not score", b"Bergkamp will not score", b"Bergkamp will score a tap in"]

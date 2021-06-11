@@ -4,7 +4,7 @@ import random
 
 @app.route("/team", methods=["GET"])
 def get_team():
-    teams = ["Arsenal", "Chelsea", "Fulham", "Liverpool"]
+    teams = ["Chelsea", "Totenham", "ManchesterUnited", "Liverpool"]
     return Response(str(random.choice(teams)), mimetype='text/plain')
 
 

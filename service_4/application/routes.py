@@ -6,23 +6,21 @@ def result():
     player = request.json["player"]
     team = request.json["team"]
     
-    if player == "Rashford":
-        message="Rashford will score 4 goals"
-    elif player == "Rooney":
+    if player == "Fabregas":
+        message="Fabregas will score 2 goals"
+    elif player == "Henry":
         if team == "Liverpool":
-            message="Rooney will not score"
+            message="Henry will not score"
         else:
-            message="Rooney will score a hat-trick"
-    elif player == "Beckham":
-        if team == "Arsenal" or team == "Fulham":
-            message="Beckham will score a freekick"
+            message="Henry will score a hat-trick"
+    elif player == "Ozil":
+        if team == "Chelsea" or team == "ManchesterUnited":
+            message="Ozil will score a freekick"
         else:
-            message="Beckham will not score"
-    elif player == "Cole":
-        if team == "Fulham":
-            message="Cole will score a tap in"
+            message="Ozil will not score"
+    elif player == "Bergkamp":
+        if team == "ManchesterUnited":
+            message="Bergkamp will score a tap in"
         else:
-            message="Cole will not score"       
+            message="Bergkamp will not score"       
     return Response(message, mimetype='text/plain')
-    
-

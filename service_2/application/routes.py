@@ -4,6 +4,6 @@ import random
 
 @app.route("/player", methods=["GET"])
 def get_player():
-    players = ["Rooney", "Beckham", "Cole", "Rashford"]
+    players = ["Henry", "Ozil", "Bergkamp", "Fabregas"]
     return Response(str(random.choice(players)), mimetype='text/plain')
 
