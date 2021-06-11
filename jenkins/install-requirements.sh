@@ -18,4 +18,4 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker login --username $DOCKER_USERNAME --password $DOKCER_PASSWORD
 
 echo Username: $DOCKER_USERNAME
-echo Password: $DOKCER_PASSWORD
+echo Password: $DOCKER_PASSWORD
