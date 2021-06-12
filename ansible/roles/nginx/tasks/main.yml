@@ -5,10 +5,6 @@
     name: nginx
     state: latest
     update_cache: true
-- name: Start NGINX Service
-  service:
-    name: nginx
-    state: started
 - name: Add nginx conf
   copy:
     src: nginx.conf
