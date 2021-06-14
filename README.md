@@ -50,7 +50,10 @@ For the project management i used a Kanban board on Trello. I found that Trello 
 I found it very easy to organise the tasks i need to get done. Below is an image of my Trello board aswell as a link to my Trello board
 ### Risk Assessment
 A picture of a detailed risk assesment can be found below.
-![] (./documentation/ed.png)
+![riskassesment1] (./screenshot/risk1.png)
+![riskassesment2] (./screenshot/risk2.png)
+![riskassesment3] (./screenshot/risk3.png)
+
 
 ### Database Structure
 I have included pictures of an ERD diagram showing the structure of the database aswell as the database shown in SQL.
