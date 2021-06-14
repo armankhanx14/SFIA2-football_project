@@ -13,8 +13,12 @@
 * [Software Infrastructure](#softwareinfrastructure)
   * [Jenkins](#jenkins)
   * [Services](#SERVICES)
-  * [Swarm](#Swarmconfig)
   * [Front-End](#FrontEnd)
+* [Components In Detail](#components)
+  * [Docker](#docker)
+  * [Docker-compose](#docker-compose)
+  * [Swarm](#Swarmconfig)
+
 * [Testing](#Testing)
   * [Unit Testing](#Unitteting)
   * [Test Coverage](#testcoverage)
@@ -75,6 +79,7 @@ The image below shows how the CI pipeline is used for my project. I begin with m
 
 ![](screenshots/ci.png)
 
+
 ## Software Infrastructure
 #
 ### Jenkins 
@@ -95,6 +100,19 @@ Further details on these stages used in the Jenkins pipeline can be found in the
 The project must include a minimum of 4 services as part of the MVP. The picture below shows how my services interact with each other.
 ![](screenshots/SERVICES.PNG)
 
+### Front-end
+![](screenshots/frontend.png)
+
+## Components in detail
+
+### Docker
+Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and deploy it as one package. These are defined inside my Dockerfile(s)
+
+### Docker-compose
+Docker compose is a tool that needs to be installed alongside docker. This tool automates the docker build process. 
+By running docker-compose, you don't have to install or maintain the software on your local machine. Your entire local development environment can be checked into source control, making it easier for other developers to collaborate on a project. The services that are created inside this file will be in the same network allowing for for each service to communicate with one another. Below is a picture of my images being built on Dockerhub
+![](screenshots/dockerhub.PNG)
+
 ### Swarm
 The swarm manager, both workers and NGINX all run on seperate VM's on Google Cloud Platform. The way in which the swarm works:
 - It starts with the manager, it pulls down the services and runs copies of them across to the workers
@@ -105,9 +123,6 @@ The swarm manager, both workers and NGINX all run on seperate VM's on Google Clo
 The image below shows a basic set up of the swarm. Once Ansible installs docker on both swarm-manager and swarm-worker nodes. It then intialises the swarm on the manager node and joins the worker nodes.
 
 ![](screenshots/swarm-config.png)
-
-### Front-end
-![](screenshots/frontend.png)
 
 ## Testing 
 #
