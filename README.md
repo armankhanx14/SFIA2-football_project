@@ -51,11 +51,11 @@ I found it very easy to organise the tasks i need to get done. Below is an image
 ### Risk Assessment
 A picture of a detailed risk assesment can be found below.
 
-![] (screenshot/risk1.PNG)
+![] (screenshots/risk1.PNG)
 
-![] (screenshot/risk2.PNG)
+![] (screenshots/risk2.PNG)
 
-![] (screenshot/risk3.PNG)
+![] (screenshots/risk3.PNG)
 
 
 ### Database Structure
