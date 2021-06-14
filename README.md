@@ -20,6 +20,7 @@
   * [Test Coverage](#testcoverage)
 * [Future Improvements & Constraints](#FutureImprovementsandproblems)
 * [Author](#Author)
+* [Acknowledgements](#Acknowledgements)
 
 ## Introduction 
 #
@@ -46,8 +47,12 @@ In order to achieve the brief and achieve the SFIA requirements, the following r
 ## Software Architecture
 #
 ### Project Management
-For the project management i used a Kanban board on Trello. I found that Trello is very easy to use and is free.
-I found it very easy to organise the tasks i need to get done. Below is an image of my Trello board aswell as a link to my Trello board
+For the project management I used a Kanban board on Trello. I found that Trello is very easy to use and is free.
+I found it very easy to organise the tasks I need to get done. Below is an image of my Trello board aswell as a link to my Trello board as I was unable to show the whole Kanban board in one picture.
+
+![](screenshots/trello.PNG)
+Click this link to navigate to my Trello Board
+[here](https://trello.com/b/iA3JCQr0/project-2-kanban)
 ### Risk Assessment
 A picture of a detailed risk assesment can be found below.
 
@@ -61,9 +66,14 @@ A picture of a detailed risk assesment can be found below.
 ### Database Structure
 I have included pictures of an ERD diagram showing the structure of the database aswell as the database shown in SQL.
 
+![](screenshots/erd.PNG) ![](screenshots/sqlerd.PNG)
+
+
 
 ### Continuous Integration Pipeline
 The image below shows how the CI pipeline is used for my project. I begin with my project management using Trello board, once I have pushed up my latest code to GitHub, this will trigure a webhook which I have added. This then automatically starts the jenkins pipeline. First, the requirements are installed, then the tests are done. Then using Docker-compose, the images will be built for all servers and pushed on to Dockerhub. Jenkins will then use Ansible to configure external nodes, including installing Docker on them. Ansible also configures as a load balancer node.The user finally conects to the load balancer and recieves the web page.
+
+![](screenshots/ci.png)
 
 ## Software Infrastructure
 #
@@ -78,10 +88,12 @@ For this project, the stages of the Jenkins pipeline is as follows:
 * Deploy stack - Configures the web-applcation on the manager and worker nodes
 
 Further details on these stages used in the Jenkins pipeline can be found in the jenkinsfile. Below, I have also included an imagine of how the build appears on jenkins.
+![](screenshots/jenkinsb.png)
 
 ### Services
 
-The project must include a minimum of 4 services as part of the MVP. The picture below shows how my services interact with each other, as you can see
+The project must include a minimum of 4 services as part of the MVP. The picture below shows how my services interact with each other.
+![](screenshots/SERVICES.PNG)
 
 ### Swarm
 The swarm manager, both workers and NGINX all run on seperate VM's on Google Cloud Platform. The way in which the swarm works:
@@ -92,21 +104,59 @@ The swarm manager, both workers and NGINX all run on seperate VM's on Google Clo
 
 The image below shows a basic set up of the swarm. Once Ansible installs docker on both swarm-manager and swarm-worker nodes. It then intialises the swarm on the manager node and joins the worker nodes.
 
+![](screenshots/swarm-config.png)
+
 ### Front-end
+![](screenshots/frontend.png)
 
 ## Testing 
 #
 ### Unit Testing
 For my project I implemented unit testing in the application. I tested all services. Unit testing allows us to test whether each function reuturns an expected response. The pictures below shows pytest running on each server.
+
+Unit Testing on Service 1
+![](screenshots/pytests1.png)
+
+Unit Testing on Service 2
+
+![](screenshots/pytests2.png)
+
+Unit Testing on Service 3
+
+![](screenshots/pytest3.png)
+
+Unit Testing on Service 4
+
+![](screenshots/pytests4.png)
+
 ### Testing Coverage
 My testing coverage did not meet the pass requirements as i only achieved a 72%. I was pretty overwhelmed with my workload and had lots of issues with GCP, so I had to move on and priorotize my time with the automation and jenkins.
+
+![](screenshots/cov.png)
+
+
 ## Future Improvements & Constraints
 #
 
 Despite my test coverage I think my application was a success. In future I believe I can definietly improve on my testing and add more testing to make it even more robust.
 
 One big problem I ran into was being limited to 4 instances in one location.This caused me major issues as I had to constantly switch between instances by stopping and starting them. This was very frustrating and held me back.
+I have attatched pictures of some of errors I mentioned above.
 
+- Unable to create a 5th instance.
+![](screenshots/nginxerror1.png)
+
+- Limited to only 4 VMs in one region (europre-west2)
+
+![](screenshots/quotaerror.png)
+
+- Submitted a case, requesting to increase my instance limit from 4 to 5
+
+![](screenshots/requesterror.png)
+
+- My request was denied, which lead to further difficulties with the deployment of the whole project. Therefore, some oppurtunity costs had to be made with the test coverage as this problem made me prirotize more importants tasks such as deployment of the application via jenkins
+
+![](screenshots/requestdenied.png)
 
 
 ## Author
