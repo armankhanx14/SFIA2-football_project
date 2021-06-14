@@ -50,13 +50,14 @@ For the project management i used a Kanban board on Trello. I found that Trello 
 I found it very easy to organise the tasks i need to get done. Below is an image of my Trello board aswell as a link to my Trello board
 ### Risk Assessment
 A picture of a detailed risk assesment can be found below.
-
+![] (./documentation/ed.png)
 
 ### Database Structure
-I have included a picture of a ERD diagram showing the structure of the database.
+I have included pictures of an ERD diagram showing the structure of the database aswell as the database shown in SQL.
 
 
 ### Continuous Integration Pipeline
+The image below shows how the CI pipeline is used for my project. I begin with my project management using Trello board, once I have pushed up my latest code to GitHub, this will trigure a webhook which I have added. This then automatically starts the jenkins pipeline. First, the requirements are installed, then the tests are done. Then using Docker-compose, the images will be built for all servers and pushed on to Dockerhub. Jenkins will then use Ansible to configure external nodes, including installing Docker on them. Ansible also configures as a load balancer node.The user finally conects to the load balancer and recieves the web page.
 
 ## Software Infrastructure
 #
@@ -70,7 +71,7 @@ For this project, the stages of the Jenkins pipeline is as follows:
 * * Installing necessary dependencies,Initializing the swarm and connecting to worker nodes and Configuring the NGINX server for load-balancing
 * Deploy stack - Configures the web-applcation on the manager and worker nodes
 
-Further details on these stages used in the Jenkins pipeline can be found in the jenkinsfile. 
+Further details on these stages used in the Jenkins pipeline can be found in the jenkinsfile. Below, I have also included an imagine of how the build appears on jenkins.
 
 ### Services
 
