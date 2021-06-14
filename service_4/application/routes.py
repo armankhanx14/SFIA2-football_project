@@ -27,5 +27,18 @@ def result():
         if team == "West-Ham":
             message="Wright will score a tap in"
         else:
-            message="Wright will not score"       
+            message="Wright will not score"   
+
+    elif player == "Adams":
+        if team == "Fulham":
+            message="Adams will score a tap in"
+        else:
+            message="Adams will not score"
+
+    elif player == "Carzola":
+        if team == "Leeds":
+            message="Carzola will score a tap in"
+        else:
+            message="Carzola will not score"  
+              
     return Response(message, mimetype='text/plain')
